@@ -26,6 +26,32 @@ Website by Websolute
         });
     }
 
+    $(window).on('scroll', function(event) {    
+        var scroll = $(window).scrollTop();
+        if (scroll < 10) {
+            $(".navbar-area").removeClass("sticky");
+        } else{
+            $(".navbar-area").addClass("sticky");
+        }
+    });
+
+    
+    var scrollLink = $('.page-scroll');
+    // Active link switching
+    $(window).scroll(function() {
+    var scrollbarLocation = $(this).scrollTop();
+
+    scrollLink.each(function() {
+
+      var sectionOffset = $(this.hash).offset().top - 73;
+
+      if ( sectionOffset <= scrollbarLocation ) {
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+      }
+    });
+    });   
+
     function sliders() {
         $('.home-slider--wrapper').slick({
             dots: false,
@@ -64,7 +90,7 @@ Website by Websolute
             dots: true,
             infinite: true,
             speed: 500,
-            autoplay: true,
+            autoplay: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             appendDots: '.case-study--left__dots',
@@ -76,7 +102,7 @@ Website by Websolute
             dots: false,
             infinite: true,
             speed: 500,
-            autoplay: true,
+            autoplay: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             asNavFor: '.case-study--left__textslider',
