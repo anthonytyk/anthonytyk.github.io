@@ -1146,7 +1146,7 @@ a {
       -o-transition: .3s all ease-out;
       transition: .3s all ease-out; }
     .pb_navbar.scrolled.pb_scrolled-light {
-      background: #212529 !important;
+      background: #b6bdc4 !important;
       -webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15);
       -moz-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15); }
